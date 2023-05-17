@@ -65,7 +65,7 @@ elif [[ "${npm_config_arch}" == "armv7l" || "${npm_config_arch}" == "ia32" ]]; t
   # with v8_enable_pointer_compression option always set for all target architectures.
   # We use the force_process_config option to use the config.gypi from the
   # nodejs process executing npm for 32-bit architectures.
-  export npm_config_force_process_config="true"
+  # export npm_config_force_process_config="true"
   CHILD_CONCURRENCY=1 yarn --frozen-lockfile
 else
   CHILD_CONCURRENCY=1 yarn --frozen-lockfile

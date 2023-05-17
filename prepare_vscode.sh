@@ -52,6 +52,12 @@ for file in ../patches/user/*.patch; do
   fi
 done
 
+if [ "$NPM_ARCH" = "armv7l" ]; then
+  export npm_config_arch="arm"
+else
+  export npm_config_arch=$(NPM_ARCH)
+fi
+
 set -x
 
 if [[ "${OS_NAME}" == "osx" ]]; then
